@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8125d38dd95e4a13931d7df156dd6b71 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_8125d38dd95e4a13931d7df156dd6b71" ></div>
+        
+</body>
+<script>    
+    
+            var map_8125d38dd95e4a13931d7df156dd6b71 = L.map(
+                "map_8125d38dd95e4a13931d7df156dd6b71",
+                {
+                    center: [-23.2118, -45.8531],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2836dc5869df444fa8e21c3dc750b006 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8125d38dd95e4a13931d7df156dd6b71);
+        
+    
+    var color_map_23698068b49946608308a53bc65d98bb = {};
+
+    
+    color_map_23698068b49946608308a53bc65d98bb.color = d3.scale.threshold()
+              .domain([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+              .range(['#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc']);
+    
+
+    color_map_23698068b49946608308a53bc65d98bb.x = d3.scale.linear()
+              .domain([1.0, 1.0])
+              .range([0, 400]);
+
+    color_map_23698068b49946608308a53bc65d98bb.legend = L.control({position: 'topright'});
+    color_map_23698068b49946608308a53bc65d98bb.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_23698068b49946608308a53bc65d98bb.legend.addTo(map_8125d38dd95e4a13931d7df156dd6b71);
+
+    color_map_23698068b49946608308a53bc65d98bb.xAxis = d3.svg.axis()
+        .scale(color_map_23698068b49946608308a53bc65d98bb.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([1, 1, 1, 1, 1]);
+
+    color_map_23698068b49946608308a53bc65d98bb.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_23698068b49946608308a53bc65d98bb.g = color_map_23698068b49946608308a53bc65d98bb.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_23698068b49946608308a53bc65d98bb.g.selectAll("rect")
+        .data(color_map_23698068b49946608308a53bc65d98bb.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_23698068b49946608308a53bc65d98bb.x(color_map_23698068b49946608308a53bc65d98bb.color.domain()[i - 1]) : color_map_23698068b49946608308a53bc65d98bb.x.range()[0],
+            x1: i < color_map_23698068b49946608308a53bc65d98bb.color.domain().length ? color_map_23698068b49946608308a53bc65d98bb.x(color_map_23698068b49946608308a53bc65d98bb.color.domain()[i]) : color_map_23698068b49946608308a53bc65d98bb.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_23698068b49946608308a53bc65d98bb.g.call(color_map_23698068b49946608308a53bc65d98bb.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Numero Total de Votos');
+    
+        function geo_json_9f6ebff56e73479c80f0e93b2f644538_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#e6e1bc", "fillOpacity": 0.75, "weight": 0.5};
+            }
+        }
+        function geo_json_9f6ebff56e73479c80f0e93b2f644538_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_9f6ebff56e73479c80f0e93b2f644538_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    geo_json_9f6ebff56e73479c80f0e93b2f644538.resetStyle(e.target);
+                },
+                mouseover: function(e) {
+                    e.target.setStyle(geo_json_9f6ebff56e73479c80f0e93b2f644538_highlighter(e.target.feature));
+                },
+                click: function(e) {
+                    map_8125d38dd95e4a13931d7df156dd6b71.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_9f6ebff56e73479c80f0e93b2f644538 = L.geoJson(null, {
+                onEachFeature: geo_json_9f6ebff56e73479c80f0e93b2f644538_onEachFeature,
+            
+                style: geo_json_9f6ebff56e73479c80f0e93b2f644538_styler,
+        }).addTo(map_8125d38dd95e4a13931d7df156dd6b71);
+            geo_json_9f6ebff56e73479c80f0e93b2f644538.addData({"bbox": [-45.91140598290599, -23.30076099968612, -45.86605575264658, -23.15149301242236], "features": [{"bbox": [-45.91140598290599, -23.16029406779661, -45.90112423664122, -23.15149301242236], "geometry": {"coordinates": [[[-45.90220769230769, -23.15930769230769], [-45.90319406779661, -23.16029406779661], [-45.90822864768683, -23.15730053380783], [-45.91140598290599, -23.154032417582417], [-45.90745579710145, -23.15149301242236], [-45.902794827586206, -23.154239655172418], [-45.90112423664122, -23.15628148854962], [-45.90220769230769, -23.15930769230769]]], "type": "Polygon"}, "id": "3811", "properties": {"BAIRRO_LOCAL_VOT": "VILA SINHA", "DS_CARGO_PERGUNTA": "RODRIG\u00c3O (Deputado Estadual)", "LOCAL_VOTACAO": "E.E. ILZA IRMA MOELLER COPPIO", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "RODRIG\u00c3O", "NR_LOCAL_VOTACAO": 1074, "NR_VOTAVEL": 30019, "QT_ABSTENCOES": 91.0, "QT_APTOS": 360.0, "QT_COMPARECIMENTO": 269.0, "QT_VOTOS": 1, "SG_PARTIDO": "NOVO", "numero_candidatos": 1, "porcentagem_votos_validos": 0.4}, "type": "Feature"}, {"bbox": [-45.890918844221105, -23.206386013400333, -45.88602151767152, -23.199562714776654], "geometry": {"coordinates": [[[-45.88996304347826, -23.200332608695646], [-45.886113573883165, -23.199562714776654], [-45.88602151767152, -23.204901975051975], [-45.890918844221105, -23.206386013400333], [-45.88996304347826, -23.200332608695646]]], "type": "Polygon"}, "id": "3812", "properties": {"BAIRRO_LOCAL_VOT": "JARDIM S\u00c3O DIMAS", "DS_CARGO_PERGUNTA": "RODRIG\u00c3O (Deputado Estadual)", "LOCAL_VOTACAO": "EE. DR. MAURICIO ANISSE CURY", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "RODRIG\u00c3O", "NR_LOCAL_VOTACAO": 2216, "NR_VOTAVEL": 30019, "QT_ABSTENCOES": 80.0, "QT_APTOS": 328.0, "QT_COMPARECIMENTO": 248.0, "QT_VOTOS": 1, "SG_PARTIDO": "NOVO", "numero_candidatos": 1, "porcentagem_votos_validos": 0.4}, "type": "Feature"}, {"bbox": [-45.9006764365086, -23.30076099968612, -45.86605575264658, -23.282943340308076], "geometry": {"coordinates": [[[-45.9006764365086, -23.294849793244868], [-45.894451078582435, -23.28463382126348], [-45.87627840831177, -23.282943340308076], [-45.87486990693496, -23.28308356415676], [-45.86605575264658, -23.300590298191604], [-45.866128, -23.300597999686133], [-45.866413, -23.3006619996861], [-45.866647, -23.30076099968612], [-45.866949, -23.300702999686116], [-45.867138, -23.30063599968608], [-45.867955, -23.3002079996861], [-45.868097, -23.300090999686105], [-45.86816, -23.2999889996861], [-45.86819, -23.299981999686054], [-45.868268, -23.29967499968597], [-45.868195, -23.299486999686046], [-45.867949, -23.299217999685993], [-45.867925, -23.29907999968603], [-45.867948, -23.29901399968599], [-45.868113, -23.29888199968599], [-45.868443, -23.298734999686083], [-45.868584, -23.298588999685997], [-45.868607, -23.29847899968604], [-45.868771, -23.29833199968605], [-45.869228, -23.298139999685972], [-45.870102, -23.297974999685998], [-45.870717, -23.29794999968606], [-45.871096, -23.298056999686032], [-45.87139844499998, -23.29826858368604], [-45.871414689, -23.298279948686], [-45.87143214299993, -23.298292159686035], [-45.871572, -23.29838999968596], [-45.871792, -23.298555999686016], [-45.872029, -23.298554999686026], [-45.872494, -23.298493999686038], [-45.872747, -23.298688999686007], [-45.872961, -23.298701999686017], [-45.873159, -23.29867099968603], [-45.873364, -23.298729999686024], [-45.87376099999989, -23.299098999686002], [-45.874014, -23.299183999686022], [-45.874165, -23.29947499968612], [-45.8742420119999, -23.299520293686044], [-45.874323, -23.299561999686034], [-45.874426, -23.299663999686032], [-45.874539, -23.299902999686182], [-45.87461, -23.299967999686054], [-45.87499, -23.30009699968607], [-45.875237, -23.300145999686123], [-45.875621, -23.30019499968609], [-45.876, -23.30018599968615], [-45.876488, -23.300124999686076], [-45.876928, -23.30010799968609], [-45.87737, -23.30003299968601], [-45.877717, -23.29989899968603], [-45.877999, -23.299715999685986], [-45.878306, -23.299436999685994], [-45.87836243399994, -23.299346364686045], [-45.878420159, -23.299253654686012], [-45.878438, -23.29922499968604], [-45.878449236000016, -23.299149455686006], [-45.878476, -23.298969499686038], [-45.87847774799997, -23.29895774368604], [-45.87848076300005, -23.298937477686053], [-45.87848377700003, -23.298917211685975], [-45.878495, -23.298841749686034], [-45.878514, -23.298713999686036], [-45.878684, -23.298298999685983], [-45.878832, -23.298174999686026], [-45.87901199999986, -23.298136999685987], [-45.880024, -23.29821799968603], [-45.880339, -23.298281999686083], [-45.880554, -23.29838999968596], [-45.880933, -23.298778999686085], [-45.881163, -23.29879399968599], [-45.881399, -23.298690999685995], [-45.881841, -23.29873299968601], [-45.882275, -23.298701999686017], [-45.882408, -23.29873699968607], [-45.882702, -23.298924999685994], [-45.882971, -23.299054999686007], [-45.883247, -23.29911099968602], [-45.883517, -23.299203999685986], [-45.883705, -23.299216999685996], [-45.88399, -23.29931099968605], [-45.884144, -23.29939499968598], [-45.884575, -23.29946699968599], [-45.884906, -23.29945799968604], [-45.885048, -23.29942899968595], [-45.88533, -23.299295999686052], [-45.885832, -23.298914999686055], [-45.886329, -23.298714999686027], [-45.886422, -23.298590999685985], [-45.886468, -23.298320999686027], [-45.886552642, -23.298081636686028], [-45.886561, -23.298057999686023], [-45.886818, -23.297713999685982], [-45.887392, -23.29739799968604], [-45.887903, -23.29720499968606], [-45.889005, -23.29667499968599], [-45.889241, -23.296603999685978], [-45.889286, -23.296561999686055], [-45.889287749, -23.296562085685977], [-45.889347, -23.29656499968604], [-45.889751, -23.296399999686066], [-45.890169, -23.296303999686025], [-45.890672, -23.296161999686], [-45.890861, -23.296138999685965], [-45.891145, -23.296167999686055], [-45.892519, -23.296376999686025], [-45.893578, -23.296648999686063], [-45.893972, -23.296719999685983], [-45.89473, -23.29680899968598], [-45.895345, -23.296819999686086], [-45.89541688199998, -23.29682909868604], [-45.89543666500002, -23.296831602685984], [-45.89545644500006, -23.296834106686013], [-45.895898, -23.296889999686016], [-45.896213, -23.296873999686028], [-45.896653, -23.296688999685998], [-45.896942, -23.296498999685994], [-45.897271, -23.29624499968603], [-45.897359, -23.296133999685992], [-45.897376214, -23.296073719685978], [-45.89737679199996, -23.29607088268601], [-45.897421, -23.295853999685917], [-45.897507, -23.29569299968592], [-45.897562, -23.295605999685918], [-45.897765, -23.295473999685917], [-45.898088, -23.29547899968589], [-45.898508, -23.295673999685945], [-45.898666, -23.295701999685953], [-45.898886, -23.295685999685965], [-45.899436, -23.295340999685926], [-45.899797, -23.29515599968599], [-45.9006764365086, -23.294849793244868]]], "type": "Polygon"}, "id": "3813", "properties": {"BAIRRO_LOCAL_VOT": "JARDIM CRUZEIRO DO SUL", "DS_CARGO_PERGUNTA": "RODRIG\u00c3O (Deputado Estadual)", "LOCAL_VOTACAO": "EMEF PROFA LUZIA LEVINA APARECIDA BORGES", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "RODRIG\u00c3O", "NR_LOCAL_VOTACAO": 1570, "NR_VOTAVEL": 30019, "QT_ABSTENCOES": 57.0, "QT_APTOS": 391.0, "QT_COMPARECIMENTO": 334.0, "QT_VOTOS": 1, "SG_PARTIDO": "NOVO", "numero_candidatos": 1, "porcentagem_votos_validos": 0.3}, "type": "Feature"}, {"bbox": [-45.88846012658228, -23.245843670886075, -45.873109626666675, -23.23583465116279], "geometry": {"coordinates": [[[-45.873109626666675, -23.24268749333333], [-45.88846012658228, -23.245843670886075], [-45.88470674418605, -23.23583465116279], [-45.873109626666675, -23.24268749333333]]], "type": "Polygon"}, "id": "3814", "properties": {"BAIRRO_LOCAL_VOT": "BOSQUE DOS EUCALIPTOS", "DS_CARGO_PERGUNTA": "RODRIG\u00c3O (Deputado Estadual)", "LOCAL_VOTACAO": "NEI MARIANITA DE OLIVEIRA PEREIRA SANTOS", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "RODRIG\u00c3O", "NR_LOCAL_VOTACAO": 1490, "NR_VOTAVEL": 30019, "QT_ABSTENCOES": 58.0, "QT_APTOS": 327.0, "QT_COMPARECIMENTO": 269.0, "QT_VOTOS": 1, "SG_PARTIDO": "NOVO", "numero_candidatos": 1, "porcentagem_votos_validos": 0.4}, "type": "Feature"}, {"bbox": [-45.89859982855247, -23.196310263929618, -45.88333306451614, -23.186081125365707], "geometry": {"coordinates": [[[-45.88333306451614, -23.192922177419355], [-45.88582587168759, -23.19531910739191], [-45.89040997067448, -23.196310263929618], [-45.89676995006809, -23.19614289605084], [-45.89859982855247, -23.193374618343704], [-45.8921861907032, -23.186081125365707], [-45.88333306451614, -23.192922177419355]]], "type": "Polygon"}, "id": "3815", "properties": {"BAIRRO_LOCAL_VOT": "CENTRO", "DS_CARGO_PERGUNTA": "RODRIG\u00c3O (Deputado Estadual)", "LOCAL_VOTACAO": "UNIVAP  CENTRO", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "RODRIG\u00c3O", "NR_LOCAL_VOTACAO": 1236, "NR_VOTAVEL": 30019, "QT_ABSTENCOES": 78.0, "QT_APTOS": 369.0, "QT_COMPARECIMENTO": 291.0, "QT_VOTOS": 1, "SG_PARTIDO": "NOVO", "numero_candidatos": 1, "porcentagem_votos_validos": 0.3}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+        geo_json_9f6ebff56e73479c80f0e93b2f644538.bindTooltip(
+            function(layer){
+            // Convert non-primitive to String.
+            let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+            let fields = ["BAIRRO_LOCAL_VOT", "LOCAL_VOTACAO", "QT_VOTOS", "QT_COMPARECIMENTO", "QT_APTOS", "porcentagem_votos_validos"];
+            return '<table style="background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;">' +
+            String(
+                fields.map(
+                columnname=>
+                    `<tr style="text-align: left;">
+                    <th style="padding: 4px; padding-right: 10px;">
+                    ${ columnname}
+                    </th>
+                    
+                    <td style="padding: 4px;">${handleObject(layer.feature.properties[columnname])
+                    }</td></tr>`
+                ).join(''))
+                +'</table>'
+            }, {"sticky": true});
+        
+</script>

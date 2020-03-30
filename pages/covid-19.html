@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html data-wf-page="5ddc01b95d412b67db3788aa" data-wf-site="5ddc01b95d412b0ce63788a6">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dados do Coronavirus - COVID-19</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/andressa.webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/drop_menu_covid.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Gothic A1:300,regular,500,600,700,800"]
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../images/webclip.png" rel="apple-touch-icon">
+</head>
+
+<body class="body">
+
+    <div id="dados-abertos" class="section">
+        <div id="features" class="feature-wrap">
+            <div class="feature-image"></div>
+        </div>
+        <!-- Side navigation -->
+        <div class="sidenav">
+            <a href="#total_lin">TOTAL CASOS</a>
+            <a href="#mortes">TOTAL MORTES</a>
+
+            <a href="#countryCases">CASOS POR PAÍS</a>
+            <a href="#countryDeaths">MORTES POR PAÍS</a>
+
+            <a href="#casos_brasil_estados">CASOS POR ESTADO</a>
+            <a href="#mortes_brasil_estados">MORTES POR ESTADO</a>
+            <a href="#mapa">MAPA</a>
+
+
+            <a href="#br_compare">COMPARAÇÕES BR</a>
+
+            <a href="#fonte_dados">FONTES</a>
+
+
+
+
+        </div>
+
+        <!-- Page content -->
+        <div class="main">
+            <h2 id="total_lin" class="text-block-3"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Total de Casos &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h2>
+            <div class="select-box">
+                <label for="total_selector1" class="label select-box1"><span class="label-desc">Selecione uma Escala</span> </label>
+                <select id="total_selector1" , onchange="getSelectValue();" class="select" class="select">
+                    <option value="lin">Linear</option>
+                    <option value="log">Logarítmica</option>
+                </select>
+            </div>
+            <iframe src="" frameborder="0" id="iframeId0" width="100%" height="820"></iframe>
+
+            <h2 id="mortes" class="text-block-3">Total de Mortes</h2>
+            <div class="select-box">
+                <label for="mortes_selector1" class="label select-box1"><span class="label-desc">Selecione uma Escala</span> </label>
+                <select id="mortes_selector1" , onchange="getSelectValue_mortes();" class="select" class="select">
+                    <option value="lin">Linear</option>
+                    <option value="log">Logarítmica</option>
+                </select>
+            </div>
+            <iframe src="" frameborder="0" id="iframeId_mortes" width="100%" height="820"></iframe>
+
+
+
+
+
+
+            <h2 id="countryCases" class="text-block-3">Casos por país</h2>
+            <div class="select-box">
+                <label for="country_cases_selector" class="label select-box1"><span class="label-desc">Selecione um País</span> </label>
+                <select id="country_cases_selector" , onchange="getSelectValue_countryCases();" class="select" class="select">
+                    <option value="none" selected disabled hidden> 
+                        Selecione um país 
+                    </option> 
+                    <option value="brasil">Brasil</option>
+                    <option value="italia">Itália</option>
+                    <option value="united_states">Estados Unidos</option>
+                    <option value="spain">Espanha</option>
+                    <option value="france">França</option>
+                    <option value="germany">Alemanha</option>
+                    <option value="united_kingdom">Inglaterra</option>
+                    <option value="china">China</option>
+
+                </select>
+            </div>
+            <div class="select-box">
+                <label for="country_cases_scale_selector" class="label select-box1"><span class="label-desc">Selecione uma Escala</span> </label>
+                <select id="country_cases_scale_selector" , onchange="getSelectValue_countryCases();" class="select" class="select">
+                    <option value="lin">Linear</option>
+                    <option value="log">Logarítmica</option>
+                </select>
+            </div>
+
+            <iframe src="" frameborder="0" id="iframeId_countryCases" width="100%" height="820"></iframe>
+
+
+
+
+
+
+
+            <h2 id="countryDeaths" class="text-block-3">Mortes por país</h2>
+            <div class="select-box">
+                <label for="country_deaths_selector" class="label select-box1"><span class="label-desc">Selecione um País</span> </label>
+                <select id="country_deaths_selector" , onchange="getSelectValue_countryDeaths();" class="select" class="select">
+                    <option value="none" selected disabled hidden> 
+                        Selecione um país 
+                    </option> 
+                    <option value="brasil">Brasil</option>
+                    <option value="italia">Itália</option>
+                    <option value="united_states">Estados Unidos</option>
+                    <option value="spain">Espanha</option>
+                    <option value="france">França</option>
+                    <option value="germany">Alemanha</option>
+                    <option value="united_kingdom">Inglaterra</option>
+                    <option value="china">China</option>
+
+                </select>
+            </div>
+            <div class="select-box">
+                <label for="country_deaths_scale_selector" class="label select-box1"><span class="label-desc">Selecione uma Escala</span> </label>
+                <select id="country_deaths_scale_selector" , onchange="getSelectValue_countryDeaths();" class="select" class="select">
+                    <option value="lin">Linear</option>
+                    <option value="log">Logarítmica</option>
+                </select>
+            </div>
+
+            <iframe src="" frameborder="0" id="iframeId_countryDeaths" width="100%" height="820"></iframe>
+
+
+
+
+
+
+
+            <h2 id="casos_brasil_estados" class="text-block-3">Casos por Estado</h2>
+            <iframe src="../images/covid19/brasil/brasil_por_estado_confirmed.html" height="820" width="100%" frameborder="0"></iframe>
+
+            <h2 id="mortes_brasil_estados" class="text-block-3">Mortes por Estado</h2>
+            <iframe src="../images/covid19/brasil/brasil_por_estado_deaths.html" height=820 width="100%" frameborder="0"></iframe>
+
+
+
+            <h2 id="mapa" class="text-block-3">Mapa dos Estados</h2>
+            <iframe src="../images/covid19/maps/cidades_estados.html" height=820 width=980 frameborder="0"></iframe>
+
+
+
+
+
+
+
+            <h2 id="br_compare" class="text-block-3">Comparação Brasil e Demais Países</h2>
+            <div class="select-box">
+                <label for="pais_compare" class="label select-box1"><span class="label-desc">Selecione um País</span> </label>
+                <select id="pais_compare" , onchange="getSelectValue_compara();" class="select" class="select">
+                    <option value="none" selected disabled hidden> 
+                        Selecione um país 
+                    </option> 
+                    <option value="italia">ITÁLIA</option>
+                    <option value="espanha">ESPANHA</option>
+                    <option value="estados_unidos">ESTADOS UNIDOS</option>
+
+                </select>
+            </div>
+            <iframe src="" frameborder="0" id="iframeId_pais_compare" width="100%" height="820"></iframe>
+
+
+
+
+
+            <h2 id="china_lockdown" class="text-block-3">China Case</h2>
+            <h3 style="text-align: justify;"> A China respondeu rapidamente ao coronavirus, concentrando todos os esforços para manter o surto limitado a região de Wuhan, com a construção de hospitais temporários e direcionamento de recursos para região.</h3>
+            <h3 style="text-align: justify;">Quando a China declarou lockdown no epicentro do surto em 24/01/2020 o número de casos era próximo de 1000, ainda assim eles alcançaram a marca de 81 mil casos dois meses depois. Os chineses descobriram que uma pessoa leva em média 9 dias
+                para chegar ao hospital desde sua contaminação, ou seja são 9 dias em que a pessoa passa disseminando o vírus.</h3>
+
+
+            <br></br>
+            <br></br>
+
+            <h1 id="fonte_dados" class="black-text"> Fontes de Dados </h1>
+            <a id="fonte" href="https://www.worldometers.info/coronavirus/" target="_blank">Worldometers</a>
+            <br></br>
+            <a id="fonte" href="https://brasil.io/dataset/covid19/caso" target="_blank">Brasil.IO</a>
+
+
+
+        </div>
+
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/webflow.js" type="text/javascript"></script>
+    <script src="../js/get_values_covid.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html data-wf-page="5ddc01b95d412b67db3788aa" data-wf-site="5ddc01b95d412b0ce63788a6">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mapa de Votação do Partido NOVO</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/andressa.webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/drop_menu.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+</head>
+
+<body class="body">
+
+    <div class="main2">
+
+        <div id="mapas" class="section">
+
+            <h1 id="geral" class="black-text">VOTAÇÃO GERAL NOVO</h1>
+            <div class="select-box">
+                <label for="map0_selector1" class="label select-box1"><span class="label-desc">Selecione um Ano</span> </label>
+
+                <select id="map0_selector1" , onchange="getSelectValue();" class="select" class="select">
+        <option value="2016">2016</option>
+        <option value="2018">2018</option>
+      </select>
+            </div>
+            <div class="select-box">
+                <label for="map0_selector2" class="label select-box1"><span class="label-desc">Selecione uma Variável</span> </label>
+
+                <select id="map0_selector2" , onchange="getSelectValue();" class="select" class="select">
+        <option value="QT_VOTOS">Total de Votos</option>
+        <option value="porcentagem_votos_validos">Porcentagem Votos Validos</option>
+      </select>
+            </div>
+
+            <div class="mapas_novo">
+                <iframe src="" frameborder="0" id="iframeId0" width="100%" height="720" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <!--                            MAPA 2 -->
+
+            <h1 id="CARGO" class="black-text">VOTAÇÃO POR CARGO</h1>
+            <div class="select-box">
+                <label for="map1_selector1" class="label select-box1"><span class="label-desc">Selecione um Ano</span> </label>
+
+                <select id="map1_selector1" , onchange="getSelectValue2();" class="select">
+      <option value="2016">2016</option>
+      <option value="2018">2018</option>
+    </select>
+            </div>
+
+            <div class="select-box">
+                <label for="map1_selector2" class="label select-box1"><span class="label-desc">Selecione uma Variável</span> </label>
+
+                <select id="map1_selector2" , onchange="getSelectValue2();" class="select">
+      <option value="QT_VOTOS">Total de Votos</option>
+      <option value="porcentagem_votos_validos">Porcentagem Votos Validos</option>
+    </select>
+            </div>
+
+            <div class="select-box">
+                <label for="map1_selector3" class="label select-box1"><span class="label-desc">Selecione um Cargo</span> </label>
+
+                <select id="map1_selector3" , onchange="getSelectValue2();" class="select">
+      <option value="PRESIDENTE">PRESIDENTE</option>
+      <option value="GOVERNADOR">GOVERNADOR</option>
+      <option value="SENADOR">SENADOR</option>
+      <option value="DEPUTADO_FEDERAL">DEPUTADO FEDERAL</option>
+      <option value="DEPUTADO_ESTADUAL">DEPUTADO ESTADUAL</option>
+      <option value="VEREADOR">VEREADOR</option>
+    </select>
+            </div>
+
+            <div class="mapas_novo">
+                <iframe id="iframeId2" src="" frameborder="0" width="100%" height="720" frameborder="0" style="border:0" allowfullscreen></iframe id="iframeId2">
+    </div>
+
+    <h1 id="CANDIDATO" class="black-text">VOTAÇÃO POR CANDIDATO</h1>
+
+    <div class="select-box">
+      <label for="map2_selector1" class="label select-box1"><span class="label-desc">Selecione um Ano</span> </label>
+  
+    <select id="map2_selector1", onchange="getSelectValue3();" class="select">
+      <option value="2016">2016</option>
+      <option value="2018">2018</option>
+    </select>
+    </div>
+
+    <div class="select-box">
+      <label for="map2_selector2" class="label select-box1"><span class="label-desc">Selecione uma Variável</span> </label>
+  
+    <select id="map2_selector2", onchange="getSelectValue2();" class="select">
+      <option value="QT_VOTOS">Total de Votos</option>
+      <option value="porcentagem_votos_validos">Porcentagem Votos Validos</option>
+    </select>
+  </div>
+
+  <div class="select-box">
+    <label for="map2_selector3" class="label select-box1"><span class="label-desc">Selecione um Candidato</span> </label>
+
+      <select id="map2_selector3", onchange="getSelectValue3();" class="select">
+        
+        <option value="DIOGO_DA_LUZ_(SENADOR)">DIOGO DA LUZ (Senador)</option>
+        <option value="CRISTINA_MONTEIRO_(DEPUTADO_ESTADUAL)">CRISTINA MONTEIRO (Deputado Estadual)</option>
+        <option value="DUDA_AMASP_(DEPUTADO_ESTADUAL)">DUDA AMASP (Deputado Estadual)</option>
+        <option value="EDU_DOMINGUES_(DEPUTADO_ESTADUAL)">EDU DOMINGUES (Deputado Estadual)</option>
+        <option value="GABRIELA_CAMARGO_(DEPUTADO_ESTADUAL)">GABRIELA CAMARGO (Deputado Estadual)</option>
+        <option value="MONICA_CURY_(DEPUTADO_ESTADUAL)">MONICA CURY (Deputado Estadual)</option>
+        <option value="ROBERTA_GRABERT_(DEPUTADO_ESTADUAL)">ROBERTA GRABERT (Deputado Estadual)</option>
+        <option value="PAULO_MATHIAS_(DEPUTADO_ESTADUAL)">PAULO MATHIAS (Deputado Estadual)</option>
+        <option value="DAVID_AZEVEDO_(DEPUTADO_FEDERAL)">DAVID AZEVEDO (Deputado Federal)</option>
+        <option value="MARLON_DO_UBER_(DEPUTADO_FEDERAL)">MARLON DO UBER (Deputado Federal)</option>
+        <option value="ADRIANA_DORÇA_(VEREADOR)">ADRIANA DORÇA (Vereador)</option>
+        <option value="AGNES_HELENA_(VEREADOR)">AGNES HELENA (Vereador)</option>
+        <option value="AGUILAR_(VEREADOR)">AGUILAR (Vereador)</option>
+        <option value="ANDRÉ_BOLINI_(VEREADOR)">ANDRÉ BOLINI (Vereador)</option>
+        <option value="CAUE_BOCCHI_(VEREADOR)">CAUE BOCCHI (Vereador)</option>
+        <option value="CORONEL_GLAUCO_(VEREADOR)">CORONEL GLAUCO (Vereador)</option>
+        <option value="DIEGO_MONTEIRO_(VEREADOR)">DIEGO MONTEIRO (Vereador)</option>
+        <option value="DIOGO_DA_LUZ_(VEREADOR)">DIOGO DA LUZ (Vereador)</option>
+        <option value="ELANIR_SANTOS_(VEREADOR)">ELANIR SANTOS (Vereador)</option>
+        <option value="FABIO_PANDO_(VEREADOR)">FABIO PANDO (Vereador)</option>
+        <option value="FERNANDO_BARROS_(VEREADOR)">FERNANDO BARROS (Vereador)</option>
+        <option value="FLÁVIO_PEDRO_(VEREADOR)">FLÁVIO PEDRO (Vereador)</option>
+        <option value="GALDINO_(VEREADOR)">GALDINO (Vereador)</option>
+        <option value="GENYS_ALVES_JR_(VEREADOR)">GENYS ALVES JR (Vereador)</option>
+        <option value="ISABEL_BARCELLO_(VEREADOR)">ISABEL BARCELLO (Vereador)</option>
+        <option value="ISABEL_TEIXEIRA_(VEREADOR)">ISABEL TEIXEIRA (Vereador)</option>
+        <option value="JANAINA_LIMA_(VEREADOR)">JANAINA LIMA (Vereador)</option>
+        <option value="JOANNA_DOUAT_(VEREADOR)">JOANNA DOUAT (Vereador)</option>
+        <option value="JOAQUIM_FANTON_(VEREADOR)">JOAQUIM FANTON (Vereador)</option>
+        <option value="JOÃO_ORTEGA_(VEREADOR)">JOÃO ORTEGA (Vereador)</option>
+        <option value="JULIO_CASARIN_(VEREADOR)">JULIO CASARIN (Vereador)</option>
+        <option value="JULIO_SERGIO_(VEREADOR)">JULIO SERGIO (Vereador)</option>
+        <option value="KATIA_BUENO_(VEREADOR)">KATIA BUENO (Vereador)</option>
+        <option value="LEO_LIMA_(VEREADOR)">LEO LIMA (Vereador)</option>
+        <option value="LUCIA_SIVELLI_(VEREADOR)">LUCIA SIVELLI (Vereador)</option>
+        <option value="LUIZ_MÓDOLO_(VEREADOR)">LUIZ MÓDOLO (Vereador)</option>
+        <option value="NAOMI_YAMAGUCHI_(VEREADOR)">NAOMI YAMAGUCHI (Vereador)</option>
+        <option value="NAOMY_SCHOLLING_(VEREADOR)">NAOMY SCHOLLING (Vereador)</option>
+        <option value="NOVO_(VEREADOR)">NOVO (Vereador)</option>
+        <option value="PAULO_PIMENTEL_(VEREADOR)">PAULO PIMENTEL (Vereador)</option>
+        <option value="PEDRO_TURATI_(VEREADOR)">PEDRO TURATI (Vereador)</option>
+        <option value="RAUL_MONEGALIA_(VEREADOR)">RAUL MONEGALIA (Vereador)</option>
+        <option value="RICARDO_MELLÃO_(VEREADOR)">RICARDO MELLÃO (Vereador)</option>
+        <option value="ROBERTO_PAIVA_(VEREADOR)">ROBERTO PAIVA (Vereador)</option>
+        <option value="RODRIGO_FONSECA_(VEREADOR)">RODRIGO FONSECA (Vereador)</option>
+        <option value="ROGERIO_MONACO_(VEREADOR)">ROGERIO MONACO (Vereador)</option>
+        <option value="ROSANA_SANTAROSA_(VEREADOR)">ROSANA SANTAROSA (Vereador)</option>
+        <option value="ROSSANO_(VEREADOR)">ROSSANO (Vereador)</option>
+        <option value="SAMANTHA_DANGOT_(VEREADOR)">SAMANTHA DANGOT (Vereador)</option>
+        <option value="THABATA_BARBOSA_(VEREADOR)">THABATA BARBOSA (Vereador)</option>
+        <option value="TOLEDO_(VEREADOR)">TOLEDO (Vereador)</option>
+        <option value="TONY_CRUYF_(VEREADOR)">TONY CRUYF (Vereador)</option>
+        <option value="WAGNER_DE_LEO_(VEREADOR)">WAGNER DE LEO (Vereador)</option>
+
+      </select>
+    </div>
+
+    <div class="mapas_novo">
+      <iframe id="iframeId3" src="" frameborder="0" width="100%" height="720" frameborder="0" style="border:0" allowfullscreen></iframe id="iframeId2">
+    </div>
+  
+  <a id = "dash" href="https://datastudio.google.com/embed/reporting/227548b7-4061-45af-9495-c9c02d0edd4d/page/OYqBB" target="_self", class="black-text">DASHBOARD GERAL</a>
+
+  <iframe src="https://datastudio.google.com/reporting/227548b7-4061-45af-9495-c9c02d0edd4d"  width="0" height="0" style="border:0" allowfullscreen></iframe>
+                <div class="notebook3"><iframe width="900" height="2620" src="https://datastudio.google.com/embed/reporting/227548b7-4061-45af-9495-c9c02d0edd4d/page/OYqBB" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="../js/get_values.js" type="text/javascript"></script>
+        <script src="../js/drop_menu.js" type="text/javascript"></script>
+
+</body>
+
+</html>
