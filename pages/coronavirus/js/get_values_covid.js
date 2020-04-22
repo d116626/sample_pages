@@ -6,9 +6,9 @@ function getSelectValue_world() {
 
 
     if (selectorOption == '') {
-        var pathValue = `../images/covid19/multipleCountry/${selectorVariable}_${selectorScale}.html`;
+        var pathValue = `images/world/multipleCountry/${selectorVariable}_${selectorScale}.html`;
     } else {
-        var pathValue = `../images/covid19/multipleCountry/${selectorOption}_${selectorVariable}_${selectorScale}.html`;
+        var pathValue = `images/world/multipleCountry/${selectorOption}_${selectorVariable}_${selectorScale}.html`;
     }
     // var res = `${str1} ${str2}`;
     document.getElementById("iframeId_world").src = pathValue;
@@ -24,7 +24,7 @@ getSelectValue_world();
 function getSelectValue_country() {
     var selectorCountry = document.getElementById("selectorCountry").value;
 
-    var pathValue = `../images/covid19/singleCountry/${selectorCountry}.html`;
+    var pathValue = `images/world/singleCountry/${selectorCountry}.html`;
     // var res = `${str1} ${str2}`;               
     document.getElementById("iframeId_country").src = pathValue;
     console.log(pathValue);
