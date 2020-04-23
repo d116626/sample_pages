@@ -26,6 +26,6 @@ body {
     font-weight: 650;
 }
 
-.center-text {
-    align-items: center;
+.link-container {
+    text-align: center;
 }
