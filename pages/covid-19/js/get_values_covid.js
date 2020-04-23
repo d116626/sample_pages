@@ -23,8 +23,10 @@ getSelectValue_world();
 // ##### SINGLE COUNTRYS CASES
 function getSelectValue_country() {
     var selectorCountry = document.getElementById("selectorCountry").value;
+    var selectorOptionCountry = document.getElementById("selectorOptionCountry").value;
 
-    var pathValue = `images/singleCountry/${selectorCountry}.html`;
+    var pathValue = `images/singleCountry/${selectorCountry}_${selectorOptionCountry}.html`;
+
     // var res = `${str1} ${str2}`;               
     document.getElementById("iframeId_country").src = pathValue;
     console.log(pathValue);

@@ -67,6 +67,15 @@
 
         <div class="row justify-content-center mb-5">
             <div class="col-3">
+                <label class="label-text">Selecione uma Opção</label>
+                <select class="form-control" id="selectorOptionCountry" onchange="getSelectValue_country();">
+                    <option value = 'cum'    >Cumulativo</option>
+                    <option value = 'daily' >Diário</option>
+
+                </select>
+            </div>
+
+            <div class="col-3">
                 <label class="label-text">Selecione um País</label>
                 <select class="form-control" id="selectorCountry" onchange="getSelectValue_country();">
                     <option value='BR'>Brasil</option>
