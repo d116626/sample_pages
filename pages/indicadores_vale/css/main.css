@@ -14,6 +14,14 @@ body {
     margin-left: auto;
 }
 
+.bd-navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+    min-height: 4rem;
+}
+
 
 /* ========== PAGE DATA ========== */
 
