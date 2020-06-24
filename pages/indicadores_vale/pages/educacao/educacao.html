@@ -61,41 +61,75 @@
 
     <!-- /* ========== PAGE DATA ========== */ -->
 
-    <div class='container azul py-2'>
+    <div class='container padding-top'>
 
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
-        <h1>Em Construção (Educacão)</h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col">
+                <label class="label-text">Selecione um Indicador</label>
+                <select class="form-control" id="selectorIndicator" onchange="getSelectValue_educacao();">
+
+                    <option value='taxa_de_abandono_do_ensino_medio'>Taxa de Abandono do Ensino Médio (2018)</option>
+                    <option value='taxa_de_abandono_do_ensino_fundamental'>Taxa de Abandono do Ensino Fundamental (2018)</option>
+
+                    <option value='taxa_de_aprovacao_do_ensino_fundamental'>Taxa de Aprovação do Ensino Fundamental (2018)</option>
+                    <option value='taxa_de_aprovacao_do_ensino_medio'>Taxa de Aprovação do Ensino Médio (2018)</option>
+                    <option value='taxa_de_reprovacao_do_ensino_fundamental'>Taxa de Reprovação do Ensino Fundamental (2018)</option>
+                    <option value='taxa_de_reprovacao_do_ensino_medio'>Taxa de Reprovação do Ensino Médio (2018)</option>
+
+                    <option value='numero_medio_de_alunos_por_docente__preescola'>Número Médio de Alunos por Docente - Pré-escola (2015)</option>
+                    <option value='numero_medio_de_alunos_por_profissional__creche'>Número Médio de Alunos por Profissional - Creche (2015)</option>
+
+                    <option value='taxa_de_analfabetismo_da_populacao_de_15_anos_e_mais__censo_demografico'>Taxa de Analfabetismo da População de 15 Anos e Mais - Censo Demográfico (2010)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_do_estado_de_sao_paulo_(idesp)__ensino_medio'>Índice de Desenvolvimento da Educação do Estado de São Paulo (Idesp) - Ensino Médio (2016)</option>
+                
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_estadual'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Estadual (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_estadual'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Estadual (2017)</option>
+
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_municipal'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Municipal (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_municipal'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Municipal (2017)</option>
+
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_publica'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Pública (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_finais__rede_publica'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Finais - Rede Pública (2017)</option>
+
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_estadual'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Estadual (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_estadual'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Estadual (2017)</option>
+
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_municipal'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Municipal (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_municipal'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Municipal (2017)</option>
+
+                    <option value='meta_do_indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_publica'>Meta do Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Pública (2019)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_basica_(ideb)__ensino_fundamental__anos_iniciais__rede_publica'>Índice de Desenvolvimento da Educação Básica (IDEB) - Ensino Fundamental - Anos Iniciais - Rede Pública (2017)</option>
+
+                    <option value='indice_de_desenvolvimento_da_educacao_do_estado_de_sao_paulo_(idesp)__ensino_fundamental__5o_ano'>Índice de Desenvolvimento da Educação do Estado de São Paulo (Idesp) - Ensino Fundamental - 5º ano (2016)</option>
+                    <option value='indice_de_desenvolvimento_da_educacao_do_estado_de_sao_paulo_(idesp)__ensino_fundamental__9o_ano'>Índice de Desenvolvimento da Educação do Estado de São Paulo (Idesp) - Ensino Fundamental - 9º ano (2016)</option>
+
+
+
+                    <option value='matriculas_no_ensino_medio'>Matrículas no Ensino Médio (2019)</option>
+                    <option value='matriculas_no_ensino_fundamental'>Matrículas no Ensino Fundamental (2019)</option>
+                    <option value='matriculas_na_educacao_infantil'>Matrículas na Educação Infantil (2019)</option>
+                    <option value='matriculas_na_preescola'>Matrículas na Pré-escola (2019)</option>
+                    <option value='matriculas_na_creche'>Matrículas na Creche (2019)</option>
+
+                    <option value='concluintes_do_ensino_fundamental'>Concluintes do Ensino Fundamental (2013)</option>
+                    <option value='concluintes_do_ensino_medio'>Concluintes do Ensino Médio (2013)</option>
+
+
+
+                    
+            </select>
+            </div>
+
+        </div>
+        <!-- <iframe src="" frameborder="0" id="iframeId_country" width="100%" height="940px"></iframe> -->
+
+        <div>
+            <iframe id="iframeId_bars" height="800" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+        </div>
+
+        <div>
+            <iframe id="iframeId_maps" height="720" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+        </div>
 
     </div>
 
@@ -122,6 +156,7 @@
     </div>
 
 
+    <script src="js/get_values_educacao.js" type="text/javascript"></script>
 
 </body>
 

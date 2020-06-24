@@ -29,6 +29,20 @@ body {
     background-color: aquamarine;
 }
 
+.padding-top {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.cards {
+    padding-left: 1rem;
+}
+
+.img-size {
+    width: 100%;
+    height: 230px;
+}
+
 
 /* ========== FOOTER ========== */
 
