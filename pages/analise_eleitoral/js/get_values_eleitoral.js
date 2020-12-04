@@ -1,5 +1,5 @@
 // ##### MULTIPLE COUNTRYS CASES
-function iframeId_mapa_eleicao() {
+function getSelectValue_mapa_eleicao() {
     var selectorAno = document.getElementById("selectorAno").value;
     var selectorPartido = document.getElementById("selectorPartido").value;
     var selectorCargo = document.getElementById("selectorCargo").value;
@@ -12,7 +12,7 @@ function iframeId_mapa_eleicao() {
     document.getElementById("iframeId_mapa_eleicao_municipal").src = pathValue;
     console.log(pathValue);
 }
-iframeId_mapa_eleicao();
+getSelectValue_mapa_eleicao();
 
 
 
