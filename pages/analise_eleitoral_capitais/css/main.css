@@ -14,22 +14,6 @@ body {
     margin-left: auto;
 }
 
-.bd-navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1071;
-    min-height: 5rem;
-}
-
-.nav-icons {
-    padding-right: 25rem;
-}
-
-.nav-img {
-    margin-left: 17rem;
-}
-
 
 /* ========== PAGE DATA ========== */
 
