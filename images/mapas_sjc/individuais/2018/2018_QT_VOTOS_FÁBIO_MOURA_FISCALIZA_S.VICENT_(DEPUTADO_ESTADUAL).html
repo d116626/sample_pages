@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_747e557eecb64cce9904d48f493a4ca2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_747e557eecb64cce9904d48f493a4ca2" ></div>
+        
+</body>
+<script>    
+    
+            var map_747e557eecb64cce9904d48f493a4ca2 = L.map(
+                "map_747e557eecb64cce9904d48f493a4ca2",
+                {
+                    center: [-23.2118, -45.8531],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3cec1e27a2ca45ce8f50a6fe205eabe2 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_747e557eecb64cce9904d48f493a4ca2);
+        
+    
+    var color_map_8d3abd2b0c564ea3ab8dd768120029a7 = {};
+
+    
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.color = d3.scale.threshold()
+              .domain([2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0])
+              .range(['#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc', '#e6e1bc']);
+    
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.x = d3.scale.linear()
+              .domain([2.0, 2.0])
+              .range([0, 400]);
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.legend = L.control({position: 'topright'});
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.legend.addTo(map_747e557eecb64cce9904d48f493a4ca2);
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.xAxis = d3.svg.axis()
+        .scale(color_map_8d3abd2b0c564ea3ab8dd768120029a7.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([2, 2, 2, 2, 2]);
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.g = color_map_8d3abd2b0c564ea3ab8dd768120029a7.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.g.selectAll("rect")
+        .data(color_map_8d3abd2b0c564ea3ab8dd768120029a7.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_8d3abd2b0c564ea3ab8dd768120029a7.x(color_map_8d3abd2b0c564ea3ab8dd768120029a7.color.domain()[i - 1]) : color_map_8d3abd2b0c564ea3ab8dd768120029a7.x.range()[0],
+            x1: i < color_map_8d3abd2b0c564ea3ab8dd768120029a7.color.domain().length ? color_map_8d3abd2b0c564ea3ab8dd768120029a7.x(color_map_8d3abd2b0c564ea3ab8dd768120029a7.color.domain()[i]) : color_map_8d3abd2b0c564ea3ab8dd768120029a7.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_8d3abd2b0c564ea3ab8dd768120029a7.g.call(color_map_8d3abd2b0c564ea3ab8dd768120029a7.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Numero Total de Votos');
+    
+        function geo_json_feef90dfd3354fc3a7dd5a6a80178e16_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#e6e1bc", "fillOpacity": 0.75, "weight": 0.5};
+            }
+        }
+        function geo_json_feef90dfd3354fc3a7dd5a6a80178e16_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#000000", "fillOpacity": 0.5, "weight": 0.1};
+            }
+        }
+        function geo_json_feef90dfd3354fc3a7dd5a6a80178e16_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    geo_json_feef90dfd3354fc3a7dd5a6a80178e16.resetStyle(e.target);
+                },
+                mouseover: function(e) {
+                    e.target.setStyle(geo_json_feef90dfd3354fc3a7dd5a6a80178e16_highlighter(e.target.feature));
+                },
+                click: function(e) {
+                    map_747e557eecb64cce9904d48f493a4ca2.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_feef90dfd3354fc3a7dd5a6a80178e16 = L.geoJson(null, {
+                onEachFeature: geo_json_feef90dfd3354fc3a7dd5a6a80178e16_onEachFeature,
+            
+                style: geo_json_feef90dfd3354fc3a7dd5a6a80178e16_styler,
+        }).addTo(map_747e557eecb64cce9904d48f493a4ca2);
+            geo_json_feef90dfd3354fc3a7dd5a6a80178e16.addData({"bbox": [-45.89715, -23.16146111111111, -45.89369765506808, -23.154133956880152], "features": [{"bbox": [-45.89715, -23.16146111111111, -45.89369765506808, -23.154133956880152], "geometry": {"coordinates": [[[-45.89641639344262, -23.161444808743166], [-45.89715, -23.16146111111111], [-45.897149999999996, -23.154885135135135], [-45.89556179454661, -23.154133956880152], [-45.89369765506808, -23.158927458396366], [-45.89641639344262, -23.161444808743166]]], "type": "Polygon"}, "id": "1922", "properties": {"BAIRRO_LOCAL_VOT": "SANTANA", "DS_CARGO_PERGUNTA": "F\u00c1BIO MOURA FISCALIZA S.VICENT (Deputado Estadual)", "LOCAL_VOTACAO": "E.E. SANTANA DO PARAIBA", "NM_MUNICIPIO": "S\u00c3O JOS\u00c9 DOS CAMPOS", "NM_PARTIDO": "Partido Novo", "NM_VOTAVEL": "F\u00c1BIO MOURA FISCALIZA S.VICENT", "NR_LOCAL_VOTACAO": 2046, "NR_VOTAVEL": 61134, "QT_ABSTENCOES": 155.0, "QT_APTOS": 638.0, "QT_COMPARECIMENTO": 483.0, "QT_VOTOS": 2, "SG_PARTIDO": "NOVO", "numero_candidatos": 2, "porcentagem_votos_validos": 0.4}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+        geo_json_feef90dfd3354fc3a7dd5a6a80178e16.bindTooltip(
+            function(layer){
+            // Convert non-primitive to String.
+            let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+            let fields = ["BAIRRO_LOCAL_VOT", "LOCAL_VOTACAO", "QT_VOTOS", "QT_COMPARECIMENTO", "QT_APTOS", "porcentagem_votos_validos"];
+            return '<table style="background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;">' +
+            String(
+                fields.map(
+                columnname=>
+                    `<tr style="text-align: left;">
+                    <th style="padding: 4px; padding-right: 10px;">
+                    ${ columnname}
+                    </th>
+                    
+                    <td style="padding: 4px;">${handleObject(layer.feature.properties[columnname])
+                    }</td></tr>`
+                ).join(''))
+                +'</table>'
+            }, {"sticky": true});
+        
+</script>
